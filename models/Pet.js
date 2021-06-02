@@ -16,8 +16,12 @@ Pet.init(
       allowNull: false,
     },
     age: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    forSale: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -29,9 +33,6 @@ Pet.init(
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
     modelName: 'pet',
   }
 );

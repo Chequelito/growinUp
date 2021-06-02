@@ -1,0 +1,12 @@
+{{#if loggedIn}}
+<section class="species">
+  <img src="/images/{{species.filename}}" alt="{{species.description}}">
+  <div class="species-details">
+    <h3>{{species.name}}</h3>
+    <p>By: {{species.owner}}</p>
+ 
+  </div>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}

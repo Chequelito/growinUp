@@ -16,8 +16,12 @@ Plant.init(
       allowNull: false,
     },
     age: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
+    },
+        forSale: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -29,9 +33,6 @@ Plant.init(
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
     modelName: 'plant',
   }
 );
